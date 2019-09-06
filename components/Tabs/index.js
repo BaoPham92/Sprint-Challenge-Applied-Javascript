@@ -9,12 +9,12 @@
 //    <div class="tab">topic here</div>
 
 // Axios call
-// axios.get(`https://lambda-times-backend.herokuapp.com/topics`)
-//     .then(res => res.data.topics)
-//     .then(res => {
-//         // Iterate of array and append elements to target location
-//         res.forEach(i => document.querySelector('.topics').append(tabs(i)))
-//     })
+axios.get(`https://lambda-times-backend.herokuapp.com/topics`)
+    .then(res => res.data.topics)
+    .then(res => {
+        // Iterate of array and append elements to target location
+        res.forEach(i => document.querySelector('.topics').append(tabs(i)))
+    })
 
 // Tab element creator
 const tabs = (data) => {
